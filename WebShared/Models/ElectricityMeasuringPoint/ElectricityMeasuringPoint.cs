@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace WebService.Models
+
+namespace WebShared.Models
 {
     public class ElectricityMeasuringPoint : Record
     {
         public ElectricityMeasuringPoint()
         {
-            CalculatingMeteringDevices = new List<CalculatingMeteringDevice>(); 
+            CalculatingMeteringDevices = new List<CalculatingMeteringDevice>();
         }
         public string Name { get; set; }
 
@@ -17,7 +15,7 @@ namespace WebService.Models
 
         public Transformer TransformerVoltage { get; set; }
         public Transformer TransformerCurrent { get; set; }
-        public List<CalculatingMeteringDevice> CalculatingMeteringDevices {get; set;}
+        public List<CalculatingMeteringDevice> CalculatingMeteringDevices { get; set; }
 
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace WebService.Models
+namespace WebShared.Models
 {
     public class PointerBuffer
     {

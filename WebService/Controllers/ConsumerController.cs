@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebService.Models;
 using Microsoft.EntityFrameworkCore;
+using WebShared.Models;
 
 namespace WebService.Controllers
 {

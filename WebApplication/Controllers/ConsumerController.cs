@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Service;
-using WebApplication.Models;
+using WebShared.Models;
+
 namespace WebApplication.Controllers
 {
     public class ConsumerController : Controller

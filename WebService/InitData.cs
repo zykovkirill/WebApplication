@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebService.Models;
+using WebShared.Models;
 
 namespace WebService
 {
-
-
   public static class InitData
     {
-
         public static void InitDataBase(ApplicationContext db)
         {
-
             var device1 = new CalculatingMeteringDevice();
             var device2 = new CalculatingMeteringDevice();
 
@@ -38,7 +35,6 @@ namespace WebService
             var test = new Organization { Name = "Test0", Address = "TestAddress0" };
             var child = new Organization { Name = "Test", Address = "TestAddress" };
             var parent = new Organization { Name = "TestParent", Address = "TestAddressParent"};
-
 
             elPoint1.CalculatingMeteringDevices.Add(device1);
             elPoint1.CalculatingMeteringDevices.Add(device2);
