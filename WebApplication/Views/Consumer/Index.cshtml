@@ -1,0 +1,37 @@
+﻿@using WebApplication.Models
+@model List<Сonsumer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Выбрать приборы с закончившемся сроком поверки</h3>
+<h3>Укажите объект</h3>
+<h3>Укажите тип приборов</h3>
+
+<form method="post">
+
+    <p>
+        <label for="objectConsumer">Выберите объект:</label>
+        <select name="objectConsumer">
+            @foreach (Сonsumer consumer in Model)
+            {
+                <option value=@consumer.Id>@consumer.Name</option>
+            }
+        </select>
+    </p>
+    <p>
+        <input name="type1" type="checkbox" value="true" />
+        <span>Трансформаторы напряжения</span> <br />
+        <input name="type2" type="checkbox" value="true" />
+        <span>Трансформаторы тока</span> <br />
+        <input name="type3" type="checkbox" value="true" />
+        <span>Электрический счётчик</span>
+
+    </p>
+
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+
+

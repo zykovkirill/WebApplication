@@ -1,0 +1,55 @@
+﻿@using WebApplication.Models
+@model List<Measurer>
+@{
+    ViewBag.Title = "Index";
+}
+<h3>Добавить новую точку измерения </h3>
+<form method="post">
+
+    <p>
+        <label for="energyMeter">Выберите счетчик:</label>
+        <select name="energyMeter">
+            @foreach (Measurer measurer in Model)
+            {
+                if (measurer.MeasurerType == MeasurerType.EnergyMeter)
+                {
+                    <option value=@measurer.Id>@measurer.Number</option>
+                }
+            }
+        </select>
+    </p>
+    <p>
+        <label for="current">Выберите трансформатор тока:</label>
+        <select name="current">
+            @foreach (Measurer measurer in Model)
+            {
+                if (measurer.MeasurerType == MeasurerType.TransformCurrent)
+                {
+                    <option value=@measurer.Id>@measurer.Number</option>
+                }
+            }
+        </select>
+    </p>
+    <p>
+        <label for="voltage">Выберите трансформатор напряжения:</label>
+        <select name="voltage">
+            @foreach (Measurer measurer in Model)
+            {
+                if (measurer.MeasurerType == MeasurerType.TransformVoltage)
+                {
+                    <option value=@measurer.Id>@measurer.Number</option>
+                }
+            }
+        </select>
+    </p>
+    <p>
+        <label>Введите имя точки измерения:</label><br />
+        <input type="text" name="name" /><br /><br />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+
+
+

@@ -1,0 +1,23 @@
+﻿@using WebApplication.Models
+@model List<Measurer>
+@{
+    ViewBag.Title = "Measurer";
+}
+
+<h3>Приборы с закончившемся сроком поверки</h3>
+
+<table width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA">
+    <tr align="left" style="background-color:#004080;color:White;">
+        <td> Идентификатор </td>
+        <td> Номер </td>
+        <td>Дата поверки</td>
+    </tr>
+    @foreach (Measurer measurer in Model)
+    {
+        <tr><td>@measurer.Id </td><td>@measurer.Number</td><td>@measurer.VerificationDate</td></tr>
+    }
+
+</table>
+
+
+

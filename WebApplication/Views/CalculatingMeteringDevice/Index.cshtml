@@ -1,0 +1,20 @@
+﻿@using WebApplication.Models
+@model IEnumerable<CalculatingMeteringDevice>
+@{
+    ViewBag.Title = "Index";
+}
+<h3>Расчетные приборы учета </h3>
+
+<table width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA">
+    <tr align="left" style="background-color:#004080;color:White;">
+        <td> Идентификатор </td>
+    </tr>
+    @foreach (CalculatingMeteringDevice сalculatingMeteringDevice in Model)
+    {
+        <tr><td>@сalculatingMeteringDevice.Id </td></tr>
+    }
+
+</table>
+
+
+
